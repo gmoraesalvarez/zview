@@ -1,0 +1,6 @@
+{
+  "name": "zview",
+  "main": "index.html",
+  "window": {
+    "toolbar": false  }
+}
