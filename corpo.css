@@ -1,41 +1,7 @@
-@font-face {font-family: 'Open Sans';font-style: normal; font-weight: 400;
-  src: local('OpenSans Regular'), url('OpenSans.ttf') format('truetype');
-}
-::-webkit-scrollbar {width: 1vw;height: 1vw}
-::-webkit-scrollbar-button {background:#974C25}
-::-webkit-scrollbar-track-piece {background:#974C25}
-::-webkit-scrollbar-thumb {background:#BF602F}
-*{}
-html{font-family:'Open Sans';font-size:14px;}
-body{background:#222;color:#f0f0f0;margin:0;}
-a{text-decoration:none;color:#fff;text-align:center;}
-a img{}
-p{font-size:14px;}
-area {border:solid #abc;}
-hr{border:none;height:1px;background:#aaa;width:50%;margin:0}
-#center{width:100vw;height:95vh;position:relative;overflow: auto}
-#top{}
-#list{margin:auto;position:relative;margin-top:8px;}
-#list img{width:100%;position:relative;}
-#list a{border:solid 1px #444;position:absolute;}
-#list a:hover{border:solid 1px #a44;}
-#log{*border:dashed 1px;width:100%}
-#hlog{color:#222;width:100%;}
-#dirs{width:100%;min-height:30px;margin-top: 8px;}
-#tit{font-size:16px;margin:2px}
-#slo{font-size:12px;margin:2px}
-.button{background:#333;border:solid 4px #333;border-radius:2px;*margin-top:26px;margin-right:8px;
-	min-width:100px;display:block;float:left;
-	transition: all 0.2s ease-out;-webkit-transition: all 0.2s ease-out;}
-.button:hover{background:#444;border:solid 4px #444;border-radius:2px;}
-.buttond{float:left;min-width:100px;min-height:100px;width:8vw;height:8vw;margin-top:2px;margin-left: 2px;border:solid 2px #444;
-	border-radius:0px;font-size:12px;background:#444 100% 100% no-repeat;background-size:32px 32px;transition: all 0.2s ease-out;-webkit-transition: all 0.2s ease-out;
-	*background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxwYXRoIHN0eWxlPSJmaWxsOiNjZmFjMjkiIGQ9Ik0gNTUuMTA1NDY5IDQyLjc2NTYyNSBDIDQ5Ljk0MTQwNiA1My4wMjczNDQgMzguMzg2NzE5IDU4LjM5MDYyNSAyNy4xOTkyMTkgNTUuNzMwNDY5IEMgMTYuMDA3ODEyIDUzLjA2NjQwNiA4LjEzMjgxMiA0My4wNzQyMTkgOC4xNjQwNjIgMzEuNTkzNzUgQyA4LjE5NTMxMiAyMC4xMDkzNzUgMTYuMTQwNjI1IDEwLjE2Nzk2OSAyNy4zNDM3NSA3LjU3MDMxMiBDIDM4LjU0Njg3NSA0Ljk3MjY1NiA1MC4wNzAzMTIgMTAuNDAyMzQ0IDU1LjE2Nzk2OSAyMC42OTUzMTIgTCAzMi45NTcwMzEgMzEuNjY3OTY5IFogIi8+Cjwvc3ZnPgo=);
-	}
-.buttond:hover{background:#777 100% 100% no-repeat;background-size:32px 32px;border:solid 2px #777;border-radius:0px;
-	*background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxwYXRoIHN0eWxlPSJmaWxsOiNjZmFjMjkiIGQ9Ik0gNTUuMTA1NDY5IDQyLjc2NTYyNSBDIDQ5Ljk0MTQwNiA1My4wMjczNDQgMzguMzg2NzE5IDU4LjM5MDYyNSAyNy4xOTkyMTkgNTUuNzMwNDY5IEMgMTYuMDA3ODEyIDUzLjA2NjQwNiA4LjEzMjgxMiA0My4wNzQyMTkgOC4xNjQwNjIgMzEuNTkzNzUgQyA4LjE5NTMxMiAyMC4xMDkzNzUgMTYuMTQwNjI1IDEwLjE2Nzk2OSAyNy4zNDM3NSA3LjU3MDMxMiBDIDM4LjU0Njg3NSA0Ljk3MjY1NiA1MC4wNzAzMTIgMTAuNDAyMzQ0IDU1LjE2Nzk2OSAyMC42OTUzMTIgTCAzMi45NTcwMzEgMzEuNjY3OTY5IFogIi8+Cjwvc3ZnPgo=);
-	}
-.buttond:focus{background:#777 100% 100% no-repeat;background-size:32px 32px;border:solid 2px #777;border-radius:0px;
-	*background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxwYXRoIHN0eWxlPSJmaWxsOiNjZmFjMjkiIGQ9Ik0gNTUuMTA1NDY5IDQyLjc2NTYyNSBDIDQ5Ljk0MTQwNiA1My4wMjczNDQgMzguMzg2NzE5IDU4LjM5MDYyNSAyNy4xOTkyMTkgNTUuNzMwNDY5IEMgMTYuMDA3ODEyIDUzLjA2NjQwNiA4LjEzMjgxMiA0My4wNzQyMTkgOC4xNjQwNjIgMzEuNTkzNzUgQyA4LjE5NTMxMiAyMC4xMDkzNzUgMTYuMTQwNjI1IDEwLjE2Nzk2OSAyNy4zNDM3NSA3LjU3MDMxMiBDIDM4LjU0Njg3NSA0Ljk3MjY1NiA1MC4wNzAzMTIgMTAuNDAyMzQ0IDU1LjE2Nzk2OSAyMC42OTUzMTIgTCAzMi45NTcwMzEgMzEuNjY3OTY5IFogIi8+Cjwvc3ZnPgo=);
-	}
-input{border:none;width:240px;background:#1a1a1a;height:26px;border-radius:2px;color:#fafafa;text-align:center;float:left;margin-right:4px;}
+html{height:100%;font-family: sans-serif}
+body{height:100%;margin:0}
+a {text-decoration: none;}
+.button {padding:4px;background:#323232;color:#fafafa;}
+
+#root_img {display:block;width:70%;height:95%;background: #f1f1f1;float: left;}
+#hlog {display:block;width:25%;height:95%;background: #fafafa;float:right;}

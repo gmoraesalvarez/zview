@@ -1,16 +1,14 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<link href="corpo.css" rel="stylesheet" type="text/css" >
-		<script src="jquery.min.js"></script>
 		<title>zview editor - zoom all the images</title>
 	</head>
 	<body>
 		<script>
-			var gui = require('nw.gui');
-			var win = gui.Window.get();
-			win.maximize();
+			//var gui = require('nw.gui');
+			//var win = gui.Window.get();
+			//win.maximize();
 		</script>
 		<div id="top">
             <!--<p id="tit">zview editor</p>
@@ -19,17 +17,19 @@
             <div id="dirs">
                 <input type="file" webkitdirectory style="display:none;" id="seldir"/>
                 <input type="file" style="display:none;" id="selfoto"/>
-                <a class="button" href="javascript:void(0)" onclick="chooseFile('#seldir');">abrir</a>
-                <a class="button" href="javascript:void(0)" onclick="addroot('#selfoto');">nova raíz</a>
-                <a class="button" href="javascript:void(0)" onclick="newarea('#selfoto');">+</a>
+                <a class="button" href="javascript:void(0)" onclick="openarea();">abrir</a>
+				<a class="button" href="javascript:void(0)" onclick="addroot();">nova raíz</a>
+				<a class="button" href="javascript:void(0)" onclick="addimg();">add img</a>
+                <a class="button" href="javascript:void(0)" onclick="newarea();">+</a>
                 <a class="button" href="javascript:void(0)" onclick="savearea();">salvar</a>
                 <a class="button" href="javascript:void(0)" onclick="zoomin();">zoom +</a>
-                <a class="button" href="javascript:void(0)" onclick="zoomout();">zoom -</a>
+				<a class="button" href="javascript:void(0)" onclick="zoomout();">zoom -</a>
+				<a class="button" href="javascript:void(0)" onclick="back();"><-</a>
             </div>
         </div>	
 		<div id="center">
+			<div id='root_img'></div>
 			<p id="list"></p>
-            <br>
             <div id="hlog"></div>
 		</div>
 	</body>
